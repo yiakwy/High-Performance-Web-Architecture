@@ -1,0 +1,108 @@
+TITLE: High Performance Web Architecture v 1.0
+
+Author : Lei Wang, Reserach Associate @ ERIAN
+Date Time 
+	   : 2015 Jan 23
+License: all rihghts reserved
+
+# if you are interesting in details, please drop me an email: L.WANG @	ntu.edu.sg   
+
+backend/
+	apps/
+		DBMangement/  # api for other apps to interacte with database for example mysql
+				DBScource/
+					data_connector_Factory.py
+					MySQL/
+						mysql_connector
+					Cassandra/
+						cluster
+						session
+					Hadoop/
+					
+					DAO/
+						sqlParser.py
+						sql_mysql/
+							mysql_sql_lexical.py
+						sql_microsoft/
+							microsoft_sql_lexical.py
+							
+						DAO.py # SINGLE INSTANCE
+					ORM/
+						Model.py
+						Django/
+							Model.py
+						SQLAlchemy/
+							...
+				view.py -- http request, return xml document by tempalte system
+				data.py -- http request, return attachent
+				api/
+					ajax.py -- http request, return json data
+					
+				model.py -- orm instance
+					global tables
+					
+					from DBmanagement.ORM import Model
+					
+					class Admin(Model)
+					
+					class Parterns(Model)
+					
+					class Weather(Model)
+					
+		Community(Forum)/
+				model.py
+					
+					class User
+					
+					class Comments # user : - comment one to many
+						posttime
+						auther
+						
+						user_id
+					class 
+				data.py
+				view.py
+				ajax.py
+				
+		...
+	Services/ # real time computing
+		formmat.py
+		Sci/
+			....
+			statistics
+			machine learning
+			data mining
+		upload
+		search
+	web/
+		
+	Utils/
+		statlsics/
+			mean
+			std
+		
+static/
+		js/
+			api/
+				angular/
+						angular.js
+						angular-csp.css
+				JQuery/ JQuery.11.min.js
+						JQuery.11.js
+						JQuery.ui.css
+						JQuery.ui.js
+						
+				... bootstrap, hightchart.js, page.js ...
+				
+			module/ # business logics
+				login/  login_view.js
+						login_view.css
+				main-page/
+						lib/ *js processing functions
+							graphics.js
+						main-page_view.js
+						main-page_view.js					
+							
+		css/main-page css
+		
+template/
